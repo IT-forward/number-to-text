@@ -4,28 +4,38 @@ let onlik = ['', 'o\'n', 'yigirma', 'o\'ttiz', 'qirq', 'ellik', 'oltmish', 'yetm
 let res;
 
 export function toTextHundreds(num) {
+    res = '';
     if(num === 100) {
         return 'yuz';
     } 
     if(num > 99 & num < 1000){
-        return birlik[Math.floor(num / 100)] + ' yuz ' + toTextTens(num % 100);
-    } else {
-        return toTextTens(num);
-    }
+        res = birlik[Math.floor(num / 100)] + ' yuz ';
+    } 
+    return res;
 }
 
 export function toTextTens(num) {
-    res = onlik[Math.floor(num / 10)];
-    if(res !== ''){
-        res += ' ';
+    res = '';
+    if(num > 99){
+        num = num % 100;
     }
-    
+
+    if(num > 10 & num < 99){
+        res += onlik[Math.floor(num / 10)] + ' ';
+    } 
+    return res;
+}
+
+export function toTextOnes(num){
+    res = '';
+
     res += birlik[num % 10];
     return res;
 }
 
 function toTextNumber(num) {
-    return toTextHundreds(num);
+     res = toTextHundreds(num) + toTextTens(num) + toTextOnes(num);
+     return res.trim();
 }
 
 export default toTextNumber;
