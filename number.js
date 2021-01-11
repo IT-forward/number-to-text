@@ -3,7 +3,7 @@ let onlik = ['', 'o\'n', 'yigirma', 'o\'ttiz', 'qirq', 'ellik', 'oltmish', 'yetm
 
 let res;
 
-function toTextHundreds(num) {
+export function toTextHundreds(num) {
     if(num === 100) {
         return 'yuz';
     } 
@@ -14,7 +14,7 @@ function toTextHundreds(num) {
     }
 }
 
-function toTextTens(num) {
+export function toTextTens(num) {
     res = onlik[Math.floor(num / 10)];
     if(res !== ''){
         res += ' ';
@@ -28,4 +28,6 @@ function toTextNumber(num) {
     return toTextHundreds(num);
 }
 
-console.log(toTextNumber(999));
+export default toTextNumber;
+
+//console.log(toTextNumber(999));
