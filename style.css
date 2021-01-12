@@ -1,0 +1,11 @@
+label {
+    display: block;
+}
+
+#number {
+    margin-left: 10px;
+}
+
+#submit {
+    margin-top: 15px;
+}
