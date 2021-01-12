@@ -9,7 +9,7 @@ export function toTextHundreds(num) {
         return 'yuz';
     } 
     if(num > 99 & num < 1000){
-        res = birlik[Math.floor(num / 100)] + ' yuz ';
+        res = birlik[Math.floor(num / 100)] + ' yuz';
     } 
     return res;
 }
@@ -21,23 +21,34 @@ export function toTextTens(num) {
     }
 
     if(num > 10 & num < 99){
-        res += onlik[Math.floor(num / 10)] + ' ';
+        res += onlik[Math.floor(num / 10)];
     } 
     return res;
 }
 
 export function toTextOnes(num){
     res = '';
-
-    res += birlik[num % 10];
+    if(typeof num === 'number'){
+        res += birlik[num % 10];
+    }
     return res;
 }
 
 function toTextNumber(num) {
-     res = toTextHundreds(num) + toTextTens(num) + toTextOnes(num);
-     return res.trim();
+    let yuzlar = toTextHundreds(num);
+    if(yuzlar !== ''){
+        yuzlar += ' ';
+    }
+
+    let onlar = toTextTens(num);
+    if(onlar !== ''){
+        onlar += ' ';
+    }
+
+    let birlar = toTextOnes(num);
+    
+    res = yuzlar + onlar + birlar;
+    return res.trim(); 
 }
 
 export default toTextNumber;
-
-//console.log(toTextNumber(999));
