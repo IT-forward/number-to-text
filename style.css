@@ -1,11 +1,92 @@
-label {
+@font-face {
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Palanquin Regular'), local('Palanquin-Regular'), url(https://fonts.gstatic.com/s/palanquin/v6/9XUnlJ90n1fBFg7ceXwccVtN.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'Palanquin';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Palanquin Bold'), local('Palanquin-Bold'), url(https://fonts.gstatic.com/s/palanquin/v6/9XUilJ90n1fBFg7ceXwUyn5Yw5Gr.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: linear-gradient(
+        90deg,
+        rgba(58, 38, 79, 0.9),
+        rgba(186, 50, 126, 0.7)
+      );
+    color: #fff;
+    font-family: Palanquin;
+    font-size: 20px;
+  }
+  
+  .align-center {
+    text-align: center;
+  }
+  
+  .form-box {
+    width: 100%;
+    margin: 40px auto 0 auto;
+  }
+  
+  @media (min-width: 576px) {
+    .form-box {
+      max-width: 540px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .form-box {
+      max-width: 720px;
+    }
+  }
+  
+  form {
+    background: rgba(76, 3, 145, 0.5);
+    padding: 40px 30px;
+    border-radius: 5px;
+  }
+  
+  p {
+    margin-bottom: 8px;
+  }
+  
+  .input-label {
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .width100 {
+    display: flex;
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
     display: block;
-}
-
-#number {
-    margin-left: 10px;
-}
-
-#submit {
-    margin-top: 15px;
-}
+    width: 100%;
+    padding: 5px;
+    font-family: Palanquin;
+    font-size: 18px;
+    background-color: #3366ff;
+    border: 1px solid #9933ff;
+    border-radius: 4px;
+    color: #fff;
+  }

@@ -7,10 +7,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form action="">
-        <label for="number">Number:<input type="number" id="number" name="number" min=0 max=999></label>
-        <input type="submit" id="submit" value="Convert">
+    <div class="form-box">
+      <header>
+        <h1 id="title" class="align-center">Sondan so'zga</h1>
+        <p id="description" class="align-center">Bu yerda siz sonni osongina so'zga aylantirishingiz mumkin</p>
+      </header>
+    
+      <form id="convert-form">
+        <div class="input-label">
+          <label for="number" id="number-label">Son</label>
+          <input type="number" id="number" class="width100" name="number" min="1" max="999" placeholder="Son kiriting" required>
+        </div>
+        
+        <div class="input-label">
+          <button type="submit" id="sumbit" class="submit-btn">O'girish</button>
+        </div>
+      
+        <div class="input-label">
+          <label for="result" id="result-label">Natija</label>
+          <input type="text" id="result" class="width100" name="result" placeholder="O'girish tugmasini bosing">
+        </div>
     </form>
-    <p id="result">Result</p>
-</body>
+    </div>
+  </body>
 </html>
