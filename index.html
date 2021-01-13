@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sondan so'zga</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="form-box">
       <header>
-        <h1 id="title" class="align-center">Sondan so'zga</h1>
-        <p id="description" class="align-center">Bu yerda siz sonni osongina so'zga aylantirishingiz mumkin</p>
+        <h1 id="title" class="align-center">Sondan so‘zga</h1>
+        <p id="description" class="align-center">
+          Bu yerda siz sonni osongina so‘zga aylantirishingiz mumkin
+        </p>
       </header>
-    
+
       <form id="convert-form">
         <div class="input-label">
           <label for="number" id="number-label">Son</label>
-          <input type="number" id="number" class="width100" name="number" min="1" max="999" placeholder="Son kiriting" required>
+          <input
+            type="number"
+            id="number"
+            class="width100"
+            name="number"
+            min="1"
+            max="999"
+            placeholder="Son kiriting"
+            required
+          />
         </div>
-        
+
         <div class="input-label">
-          <button type="submit" id="sumbit" class="submit-btn">O'girish</button>
+          <button type="submit" id="sumbit" class="submit-btn">O‘girish</button>
         </div>
-      
-        <div class="input-label">
-          <label for="result" id="result-label">Natija</label>
-          <input type="text" id="result" class="width100" name="result" placeholder="O'girish tugmasini bosing">
-        </div>
-    </form>
+
+        <div class="input-label" class="width100">Natija bu yerda chiqadi</div>
+      </form>
     </div>
   </body>
 </html>
