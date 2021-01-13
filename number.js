@@ -4,25 +4,22 @@ let tens = ['', 'o‘n', 'yigirma', 'o‘ttiz', 'qirq', 'ellik', 'oltmish', 'yet
 
 function hundredsToText(num) {
     let res = '';
+
     if(num === 100) {
         return 'yuz';
     } 
+
     if(num > 99 & num < 1000){
         res = ones[Math.floor(num / 100)] + ' yuz';
     } 
+    
     return res;
 }
 
 function tensToText(num) {
-    let res = '';
-    if(num > 99){
-        num = num % 100;
-    }
+    num = num % 100;
 
-    if(num > 10 & num < 99){
-        res += tens[Math.floor(num / 10)];
-    } 
-    return res;
+    return tens[Math.floor(num / 10)];
 }
 
 function onesToText(num){
@@ -37,15 +34,17 @@ function convert(num) {
     }
 
     textForm = hundredsToText(num);
+
     let tens = tensToText(num);
     if(tens !== ''){
         textForm += ' ' + tens;
     }
+
     let ones = onesToText(num);
     if(ones !== ''){
         textForm += ' ' + ones;
-    }
-    
+    } 
+
     return textForm.trim(); 
 }
 
