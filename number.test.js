@@ -1,44 +1,36 @@
 
-import toTextNumber from "./number";
+import convert from "./number";
 
-describe("toTextNumber()", () => {
+describe("convert()", () => {
     it("converts number to text", () => {
-        expect(toTextNumber(122)).toBe("bir yuz yigirma ikki");
+        expect(convert(122)).toBe("bir yuz yigirma ikki");
     });
 
     it("converts three digit number to text", () => {
-        expect(toTextNumber(105)).toBe("bir yuz besh");
+        expect(convert(405)).toBe("to‘rt yuz besh");
     });
 
     it("converts two digit number to text without space at the end", () => {
-        expect(toTextNumber(57)).toBe("ellik yetti");
+        expect(convert(57)).toBe("ellik yetti");
     });
 
     it("converts three digit number without tens and ones to text", () => {
-        expect(toTextNumber(900)).toBe("to'qqiz yuz");
+        expect(convert(900)).toBe("to‘qqiz yuz");
     });
 
     it("converts three digit number with tens to text", () => {
-        expect(toTextNumber(330)).toBe("uch yuz o'ttiz");
+        expect(convert(330)).toBe("uch yuz o‘ttiz");
     });
 
     it("converts tens without ones to text", () => {
-        expect(toTextNumber(40)).toBe("qirq");
-    });
-
-    it("converts tens and ones to text", () => {
-        expect(toTextNumber(68)).toBe("oltmish sakkiz");
+        expect(convert(40)).toBe("qirq");
     });
 
     it("converts one digit number to text", () => {
-        expect(toTextNumber(6)).toBe("olti");
-    });
-
-    it("returns empty string", () => {
-        expect(toTextNumber()).toBe("");
+        expect(convert(6)).toBe("olti");
     });
 
     it("passing zero returns empty string", () => {
-        expect(toTextNumber(0)).toBe("");
+        expect(convert(0)).toBe("");
     });
 });
