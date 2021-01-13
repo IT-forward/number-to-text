@@ -30,6 +30,10 @@ describe("convert()", () => {
         expect(convert(6)).toBe("olti");
     });
 
+    it("passing no argument returns empty string", () => {
+        expect(convert()).toBe("");
+    });
+
     it("passing zero returns empty string", () => {
         expect(convert(0)).toBe("");
     });

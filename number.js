@@ -30,7 +30,13 @@ function onesToText(num){
 }
 
 function convert(num) {
-    let textForm = hundredsToText(num);
+    let textForm = '';
+
+    if(typeof num !== 'number'){
+        return textForm;
+    }
+
+    textForm = hundredsToText(num);
     let tens = tensToText(num);
     if(tens !== ''){
         textForm += ' ' + tens;
