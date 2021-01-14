@@ -49,3 +49,16 @@ function convert(num) {
 }
 
 export default convert;
+
+const form = document.getElementById("convert-form");
+const input = form.elements['number'];
+const output = document.getElementById("result");
+
+form.addEventListener('submit', function(event) {
+    const number = input.value;
+    const result = convert(parseInt(number));
+
+    output.textContent = result;
+    
+    event.preventDefault();
+  });
