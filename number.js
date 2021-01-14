@@ -48,8 +48,6 @@ function convert(num) {
     return textForm.trim(); 
 }
 
-export default convert;
-
 const form = document.getElementById("convert-form");
 const input = form.elements['number'];
 const output = document.getElementById("result");
