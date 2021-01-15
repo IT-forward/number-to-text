@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sondan so'zga</title>
     <link rel="stylesheet" href="./style.css" />
+    
   </head>
   <body>
     <div class="form-box">
@@ -15,7 +16,7 @@
         </p>
       </header>
 
-      <form id="convert-form">
+      <form action="" method="GET" id="convert-form">
         <div class="input-label">
           <label for="number" id="number-label">Son</label>
           <input
@@ -31,11 +32,13 @@
         </div>
 
         <div class="input-label">
-          <button type="submit" id="sumbit" class="submit-btn">O‘girish</button>
+          <button type="submit" id="submit" class="submit-btn">O‘girish</button>
         </div>
 
-        <div class="input-label" class="width100">Natija bu yerda chiqadi</div>
+        <div class="input-label" id="result" class="width100">Natija bu yerda chiqadi</div>
+        
       </form>
     </div>
+    <script src="number.js"></script>
   </body>
 </html>
