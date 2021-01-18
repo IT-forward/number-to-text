@@ -47,13 +47,3 @@ function convert(num) {
 
     return textForm.trim(); 
 }
-
-const form = document.getElementById("convert-form");
-const input = form.elements['number'];
-const output = document.getElementById("result");
-
-form.addEventListener('submit', function(event) {
-    output.innerHTML = convert(parseInt(input.value));
-
-    event.preventDefault();
-  });
