@@ -40,5 +40,15 @@
       </form>
     </div>
     <script src="number.js"></script>
+    <script>
+        const form = document.getElementById("convert-form");
+        const input = form.elements['number'];
+        const output = document.getElementById("result");
+
+        form.addEventListener('submit', function(event) {
+            output.innerHTML = convert(parseInt(input.value));
+            event.preventDefault();
+        });
+    </script>
   </body>
 </html>
