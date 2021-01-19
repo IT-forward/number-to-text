@@ -1,5 +1,5 @@
 
-import convert from "./number";
+import convert from "./src/number";
 
 describe("convert()", () => {
     it("converts number to text", () => {
