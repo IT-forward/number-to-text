@@ -47,3 +47,5 @@ function convert(num) {
 
     return textForm.trim(); 
 }
+
+export default convert;
