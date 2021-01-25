@@ -1,19 +1,30 @@
 let ones = ['', 'bir', 'ikki', 'uch', 'to‘rt', 'besh', 'olti', 'yetti', 'sakkiz', 'to‘qqiz'];
 let tens = ['', 'o‘n', 'yigirma', 'o‘ttiz', 'qirq', 'ellik', 'oltmish', 'yetmish', 'sakson', 'to‘qson'];
 
-
-function hundredsToText(num) {
+function thousandsToText(num) {
     let res = '';
 
+    if(num === 1000){
+        return 'ming';
+    }
+    
+    if(num > 999 & num < 10000) {
+        res = ones[Math.floor(num / 1000)] + ' ming';
+    }
+    return res;
+}
+
+function hundredsToText(num) {
+    num = num % 1000;
     if(num === 100) {
         return 'yuz';
     } 
-
-    if(num > 99 & num < 1000){
-        res = ones[Math.floor(num / 100)] + ' yuz';
-    } 
     
-    return res;
+    if(num < 100){
+        return '';
+    }
+
+    return ones[Math.floor(num / 100)] + ' yuz';
 }
 
 function tensToText(num) {
@@ -33,7 +44,12 @@ function convert(num) {
         return textForm;
     }
 
-    textForm = hundredsToText(num);
+    textForm = thousandsToText(num);
+
+    let hundreds = hundredsToText(num);
+    if(hundreds !== ''){
+        textForm += ' ' + hundreds;
+    }
 
     let tens = tensToText(num);
     if(tens !== ''){
@@ -49,3 +65,4 @@ function convert(num) {
 }
 
 export default convert;
+
