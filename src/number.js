@@ -1,6 +1,7 @@
 let ones = ['', 'bir', 'ikki', 'uch', 'to‘rt', 'besh', 'olti', 'yetti', 'sakkiz', 'to‘qqiz'];
 let tens = ['', 'o‘n', 'yigirma', 'o‘ttiz', 'qirq', 'ellik', 'oltmish', 'yetmish', 'sakson', 'to‘qson'];
-let nameOfGroup = ['', 'ming', 'million', 'milliard', 'trilion']; 
+let nameOfGroup = ['', 'ming', 'million', 'milliard', 'trilion', 'kvadrilon', 'kvintilon', 'sekstilon',
+                   'septilon', 'oktalon', 'nonalon', 'dekalon', 'endekalon', 'dodekalon']; 
 
 function hundredsToText(num) {
     let res = '';
